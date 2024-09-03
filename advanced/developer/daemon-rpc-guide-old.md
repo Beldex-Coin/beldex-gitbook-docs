@@ -1,4 +1,4 @@
-# Daemon RPC Guide - Old
+# Daemon RPC Guide
 
 ## Introduction
 
@@ -1251,6 +1251,7 @@ Outputs:
 * _encrypted\_bchat\_value_ - The encrypted bchat value.
 * _encrypted\_wallet\_value_ - The encrypted wallet value.
 * _encrypted\_belnet\_value_ - The encrypted belnet value.
+* _encrypted\_eth\_addr\_value_ - The encrypted eth address value.
 * _update\_height -_ The last height that this Beldex Name Service entry was updated on the Blockchain.
 * _expiration\_height_ - For records that expire, this will be set to the expiration block height.
 * _tx\_id_ - The txid of the mapping's most recent update or purchase.
@@ -1268,6 +1269,7 @@ $ curl -X POST http://127.0.0.1:29092/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
         "encrypted_bchat_value": "a55e54b4a5ed729db677a5ab1b64255de2a8e0311611e273ad52c0e260a542a1a0979f7ff1c09a6ba3aafc6524d41161b991dccd9f45bc0e1f9c2ac57ad9b77718a59ee27aa9d1957c",
         "encrypted_belnet_value": "407e37d23b2679fbfc21a3c0232b43f003e457a10dd942032f6d44c91683028e160eda51baeecc3f82935a7a7607266493317132236e93c9785cdbf2a24beba7804de46e86f2807d",
         "encrypted_wallet_value": "",
+         "encrypted_eth_addr_value": "",
         "entry_index": 0,
         "expiration_height": 1358011,
         "name_hash": "4dknDpBMCXaxpvT72UvmYkyL4CgH7D0wVx3I1/unikg=",
@@ -1301,6 +1303,7 @@ Outputs:
 * _encrypted\_bchat\_value_ - The encrypted bchat value.
 * _encrypted\_wallet\_value_ - The encrypted wallet value.
 * _encrypted\_belnet\_value_ - The encrypted belnet value.
+* _encrypted\_eth\_addr\_value_ - The encrypted eth address value.
 * _update\_height -_ The last height that this Beldex Name Service entry was updated on the Blockchain.
 * _expiration\_height_ - For records that expire, this will be set to the expiration block height.
 * _tx\_id_ - The txid of the mapping's most recent update or purchase.
@@ -1318,6 +1321,7 @@ $ curl -X POST http://127.0.0.1:29092/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
         "encrypted_bchat_value": "a55e54b4a5ed729db677a5ab1b64255de2a8e0311611e273ad52c0e260a542a1a0979f7ff1c09a6ba3aafc6524d41161b991dccd9f45bc0e1f9c2ac57ad9b77718a59ee27aa9d1957c",
         "encrypted_belnet_value": "407e37d23b2679fbfc21a3c0232b43f003e457a10dd942032f6d44c91683028e160eda51baeecc3f82935a7a7607266493317132236e93c9785cdbf2a24beba7804de46e86f2807d",
         "encrypted_wallet_value": "",
+         "encrypted_eth_addr_value": "",
         "expiration_height": 1358011,
         "name_hash": "4dknDpBMCXaxpvT72UvmYkyL4CgH7D0wVx3I1/unikg=",
         "owner": "9zy7tYvhhjGUPByuk8AxvjJtK2gK7Vt4ebHSS7QuKojeD7hR6G2253aMmFCpcwaAjXR75BWy7Vjor5chH3nG79Uk3aRqWtR",

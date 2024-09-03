@@ -45,8 +45,6 @@
 
 * [Developer](advanced/developer/README.md)
   * [Master Node RPC Guide](advanced/developer/master-node-rpc-guide.md)
-  * [Daemon RPC Guide - Old](advanced/developer/daemon-rpc-guide-old.md)
-  * [Daemon RPC Guide](advanced/developer/daemon-rpc-guide.md)
-  * [Wallet RPC Guide - Old](advanced/developer/wallet-rpc-guide-old.md)
-  * [Wallet RPC Guide](advanced/developer/wallet-rpc-guide.md)
+  * [Daemon RPC Guide](advanced/developer/daemon-rpc-guide-old.md)
+  * [Wallet RPC Guide](advanced/developer/wallet-rpc-guide-old.md)
   * [Developer FAQ](advanced/developer/developer-faq.md)

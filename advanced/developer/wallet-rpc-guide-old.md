@@ -1,4 +1,4 @@
-# Wallet RPC Guide - Old
+# Wallet RPC Guide
 
 ### &#x20;<a href="#introduction" id="introduction"></a>
 
@@ -2756,7 +2756,7 @@ $ curl -X POST http://localhost:19092/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
 
 ### bns\_buy\_mapping <a href="#sources" id="sources"></a>
 
-Map the BNS name to the BChat Id, Belnet key, and wallet address.
+Map the BNS name to the BChat Id, Belnet key, bdx address and ETH address.
 
 Alias: _None_.
 
@@ -2766,9 +2766,10 @@ Inputs:
 * _owner_ - string; (Optional) The ed25519 public key or wallet address that has authority to update the mapping.
 * _backup\_owner_ - string; (Optional) The secondary, backup public key that has authority to update the mapping.
 * _name_ - string; The name to purchase via Beldex Name Service.
-* _value\_bchat_ - string; The value of bchat that the name maps to via Beldex Name Service, (i.e. For Bchat: \[display name->bchat public key]).
-* _value\_wallet_ - string; The value of wallet that the name maps to via Beldex Name Service, (i.e, For wallets: \[name->wallet address]).
-* _value\_belnet_ - string; The value of wallet that the name maps to via Beldex Name Service, (i.e, For Belnet: \[name->domain name]).
+* _value\_bchat_ - string; The value of bchat id that the name maps to Beldex Name Service.
+* _value\_wallet_ - string; The value of wallet that the name maps to Beldex Name Service.
+* _value\_eth\_addr_ - string; The value of ETH address that the name maps to Beldex Name Service.
+* _value\_belnet_ - string; The value of belnet address that the name maps to Beldex Name Service.
 * _account\_index_ - uint32\_t; (Optional) Transfer from this account index. (Defaults to 0).
 * _subaddr\_indices_ - array of unsigned int; (Optional) List of subaddress indices to query for transfers. (defaults to 0).
 * _priority_ - unsigned int; Set a priority for the transaction. Accepted Values are: 0 and 1 for: flash and unimportant.
@@ -2790,7 +2791,7 @@ Outputs:
 
 Example:
 
-<pre><code><strong>$ curl -X POST http://127.0.0.1:19092/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"bns_buy_mapping","params":{"years":"5y","name":"toretto.bdx","value_bchat":"bdb37ba20b46b5576012eec7547f70eb532276085bb04b6152354de5b187b29807","address":"9zy7tYvhhjGUPByuk8AxvjJtK2gK7Vt4ebHSS7QuKojeD7hR6G2253aMmFCpcwaAjXR75BWy7Vjor5chH3nG79Uk3aRqWtR"}}' -H 'Content-Type: application/json'
+<pre><code><strong>$ curl -X POST http://127.0.0.1:19092/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"bns_buy_mapping","params":{"years":"5y","name":"toretto.bdx","value_bchat":"bdb37ba20b46b5576012eec7547f70eb532276085bb04b6152354de5b187b29807","value_wallet":"9zy7tYvhhjGUPByuk8AxvjJtK2gK7Vt4ebHSS7QuKojeD7hR6G2253aMmFCpcwaAjXR75BWy7Vjor5chH3nG79Uk3aRqWtR"}}' -H 'Content-Type: application/json'
 </strong>{
   "id": "0",
   "jsonrpc": "2.0",
@@ -2862,16 +2863,17 @@ Example:
 
 ### bns\_update\_mapping <a href="#sources" id="sources"></a>
 
-Modify the Bchat and Belnet key values, as well as the wallet's address. Additionally, it is possible to update both the Owner and Backup Owner information.
+Modify the Bchat and Belnet key values, as well as the wallet's address and ETH address. Additionally, it is possible to update both the Owner and Backup Owner information.
 
 Alias: _None_.
 
 Inputs:
 
 * _name_ - string; The name to Update.
-* _value\_bchat_ - string; The value of bchat that the name maps to via Beldex Name Service, (i.e. For Bchat: \[display name->bchat public key]).
-* _value\_wallet_ - string; The value of wallet that the name maps to via Beldex Name Service, (i.e, For wallets: \[name->wallet address]).
-* _value\_belnet_ - string; The value of wallet that the name maps to via Beldex Name Service, (i.e, For Belnet: \[name->domain name]).
+* _value\_bchat_ - string; The value of bchat id that the name maps to Beldex Name Service.
+* _value\_wallet_ - string; The value of wallet that the name maps to Beldex Name Service.
+* _value\_eth\_addr_ - string; The value of ETH address that the name maps to Beldex Name Service.
+* _value\_belnet_ - string; The value of belnet address that the name maps to Beldex Name Service.
 * _owner_ - string; (Optional) The ed25519 public key or wallet address that has authority to update the mapping.
 * _backup\_owner_ - string; (Optional) The secondary, backup public key that has authority to update the mapping.
 * _signature_ - string; (Optional) Signature derived using libsodium generichash on {current txid blob, new value blob} of the mapping to update. By default the hash is signed using the wallet's spend key as an ed25519 keypair, if signature is specified.
@@ -2986,11 +2988,13 @@ Outputs:
 * _owner_ - Address of the wallet.
 * _backup\_owner_ - backup\_owner address if given.
 * _encrypted\_bchat\_value_ - Encrypted value of bchat that the name maps to, in hex.
-* _encrypted\_wallet\_value_ - Encrypted value of wallet that the name maps to, in hex.
-* _encrypted\_belnet\_value_ - Encrypted value of belnet that the name maps to, in hex.
-* _bchat\_value_ - Decrypted bchat value that that name maps to.  Only provided if \`decrypt: true\` was specified in the request.
-* _wallet\_value_ - Decrypted wallet value that that name maps to.  Only provided if \`decrypt: true\` was specified in the request.
-* _belnet\_value_ - Decrypted belnet value that that name maps to.  Only provided if \`decrypt: true\` was specified in the request.
+* _encrypted\_wallet\_value_ - Encrypted value of BDX wallet address that the name maps to, in hex.
+* _encrypted\_eth\_addr\_value_ - Encrypted value of eth address that the name maps to, in hex.
+* _encrypted\_belnet\_value_ - Encrypted value of belnet  address that the name maps to, in hex.
+* _bchat\_value_ - Decrypted bchat value that  the name maps to.  Only provided if \`decrypt: true\` was specified in the request.
+* _wallet\_value_ - Decrypted wallet value that  the name maps to.  Only provided if \`decrypt: true\` was specified in the request.
+* _belnet\_value_ - Decrypted belnet value that that the name maps to.  Only provided if \`decrypt: true\` was specified in the request.
+* _eth\_addr\_value_ - Decrypted etc address value that the name maps to.  Only provided if \`decrypt: true\` was specified in the request.
 * _update\_height_ - Last height that this Beldex Name Service entry was updated on the Blockchain.
 * _expiration\_height_ - For records that expire, this will be set to the expiration block height.
 * _expired_ - Indicates whether the record has expired. Only included in the response if "include\_expired" is specified in the request.
@@ -3007,6 +3011,7 @@ Example:
       "encrypted_bchat_value": "a55e54b4a5ed729db677a5ab1b64255de2a8e0311611e273ad52c0e260a542a1a0979f7ff1c09a6ba3aafc6524d41161b991dccd9f45bc0e1f9c2ac57ad9b77718a59ee27aa9d1957c",
       "encrypted_belnet_value": "407e37d23b2679fbfc21a3c0232b43f003e457a10dd942032f6d44c91683028e160eda51baeecc3f82935a7a7607266493317132236e93c9785cdbf2a24beba7804de46e86f2807d",
       "encrypted_wallet_value": "",
+      "encrypted_eth_addr_value": "",
       "expiration_height": 1358011,
       "hashed": "4dknDpBMCXaxpvT72UvmYkyL4CgH7D0wVx3I1/unikg=",
       "name": "toretto.bdx",
