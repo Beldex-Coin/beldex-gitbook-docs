@@ -1,8 +1,8 @@
 # Introduction to Beldex
 
-Privacy is having the agency to decide when you reveal personal information. It is a particularly valuable quality today, when the collection and storage of personal data are taking place at unprecedented levels in history.
+Confidentiality is having the agency to decide when you reveal personal information. It is a particularly valuable quality today, when the collection and storage of personal data are taking place at unprecedented levels in history.
 
-Beldex is a privacy currency based on Monero, Beldex currently offers incentive based Master Nodes and in future Beldex will be using POS instead of POW.
+Beldex is a confidential currency based on Monero, Beldex currently offers incentive based Master Nodes and in future Beldex will be using POS instead of POW.
 
 Beldex is mainly focused on utilities where you can spend beldex freely, we are in the process of creating a crypto ecosystem to eliminate the middleman and perform financial transactions with absolute freedom
 

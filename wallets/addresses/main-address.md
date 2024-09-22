@@ -6,7 +6,7 @@ A Beldex public address is what you publish to get paid.
 
 An address can be generated offline and for free. It boils down to generating a large random number representing your private spending key.
 
-Publishing your Beldex address does **not** endanger your privacy. That's because in Beldex transactions go to stealth addresses which are decoupled from your public address.
+Publishing your Beldex address does **not** endanger your confidentiality. That's because in Beldex transactions go to stealth addresses which are decoupled from your public address.
 
 There are a few **types of public addresses** in Beldex:
 

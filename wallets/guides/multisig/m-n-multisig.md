@@ -35,7 +35,7 @@ Requirements:
 
 * `N` empty `beldex-wallet-cli` wallets.
 * All parties wallets connected to a `beldexd`.
-* Private communication channel.
+* Confidential communication channel.
 
 #### Step 1 - Prepare Multisig <a href="#step-1-prepare-multisig" id="step-1-prepare-multisig"></a>
 
@@ -57,7 +57,7 @@ This includes the PRIVATE view key, so needs to be disclosed only to that multis
 
 Copy the entire line `Multisig…...Vozid` and be sure to capture the whole thing when copying.
 
-Each person must send their `Multisig…...arg` to each other person, it is suggested to send this information through a private comunication channel.
+Each person must send their `Multisig…...arg` to each other person, it is suggested to send this information through a confidential comunication channel.
 
 #### Step 2 - Make Multisig <a href="#step-2-make-multisig" id="step-2-make-multisig"></a>
 

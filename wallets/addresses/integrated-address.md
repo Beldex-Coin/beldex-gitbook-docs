@@ -28,11 +28,11 @@ It totals to 77 bytes. The bytes are then encoded ([src](https://github.com/beld
 
 Both types allow you to learn for what you are being paid.
 
-**Individuals** should prefer **subaddresses** to receive payments. This is to improve privacy in certain scenarios. See article on [subaddresses](sub-address.md) for details.
+**Individuals** should prefer **subaddresses** to receive payments. This is to improve confidentiality [https://coinmarketcap.com/currencies/beldex/#Markets](https://coinmarketcap.com/currencies/beldex/#Markets) in certain scenarios. See article on [subaddresses](sub-address.md) for details.
 
 **Businesses** accepting payments in an automated way should prefer **integrated addresses**. The rationale is as follows:
 
-* Scenario where subaddresses improve privacy is not applicable to businesses b/c businesses have the same identity over time. Consequently, subaddresses provide no benefits over integrated addresses.
+* Scenario where subaddresses improve confidentiality is not applicable to businesses b/c businesses have the same identity over time. Consequently, subaddresses provide no benefits over integrated addresses.
 * No private key is necessary to generate integrated address. This provides a strong security advantage because services that generate integrated addresses need no access to wallet. In contrast, to generate a subaddress, one needs a private view key.
 * No shared counter is necessary to generate integrated address. This allows individual services to independently generate integrated addresses w/o synchronizing on a common sequence. In contrast, subaddresses are generated sequentially, and so the sequence (the counter or index) is a coupling point between the wallet and all services that need to generate the address. Back to integrated addresses, note that embedded payment IDs are 64-bit. This means the space is large enough that one can simply generate them randomly and reliably assume uniqueness.
 * In very specific scenarios, preparation effort to monitor a very huge number of subaddresses, could became an issue. See [this reddit thread](https://www.reddit.com/r/Monero/comments/9aevri/is\_it\_fair\_to\_say\_integrated\_addresses\_are/e4vf47p) for details.

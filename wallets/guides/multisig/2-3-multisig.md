@@ -35,7 +35,7 @@ Requirements:
 
 * 3 empty `beldex-wallet-cli` wallets
 * All parties wallets connected to a `beldexd`
-* Private communication channel
+* Confidential communication channel
 
 #### Step 1 - Prepare Multisig <a href="#step-1-prepare-multisig" id="step-1-prepare-multisig"></a>
 

@@ -1,6 +1,6 @@
 # What Wallet to use?
 
-The Beldex wallets are a gateway into private decentralised transactions and communications. They allow you to hold private keys and secure, mine, stake or trade Beldex. Each wallet is designed specifically for different users depending on their goal and level of expertise.
+The Beldex wallets are a gateway into confidential, decentralised transactions and communications. They allow you to hold private keys and secure, mine, stake or trade Beldex. Each wallet is designed specifically for different users depending on their goal and level of expertise.
 
 The different wallets currently available are the:
 

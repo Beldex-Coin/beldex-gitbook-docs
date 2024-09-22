@@ -37,7 +37,7 @@ Requirements:
 
 * 2 empty `beldex-wallet-cli` wallets
 * Both wallets connected to `beldexd`
-* Private communication channel
+* Confidential communication channel
 
 **Person A** must run the command in their `beldex-wallet-cli`:
 
@@ -57,7 +57,7 @@ This includes the PRIVATE view key, so needs to be disclosed only to that multis
 
 Copy the entire line `Multisig...5ozpN` and be sure to capture the whole thing when copying.
 
-Send this line to person B through a private communication channel.
+Send this line to person B through a confidential communication channel.
 
 **Person B** does the same and sends his output to person A.
 
@@ -77,7 +77,7 @@ Send this multisig info to all other participants, then use make_multisig <thres
 This includes the PRIVATE view key, so needs to be disclosed only to that multisig wallet's participants
 ```
 
-**Person B** will copy the `Multisig…...eJi4FS` and send it to person A through a private communication channel.
+**Person B** will copy the `Multisig…...eJi4FS` and send it to person A through a confidential communication channel.
 
 #### Step 2 Create Multisig Wallets <a href="#step-2-create-multisig-wallets" id="step-2-create-multisig-wallets"></a>
 
