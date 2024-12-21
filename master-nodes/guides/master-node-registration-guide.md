@@ -134,7 +134,7 @@ Open the Electron Desktop wallet and  entertThe generated \`register\_master\_no
 
 When you click the "Register Master Node" button, the Master Node will be successfully registered, and a confirmation message stating "Master Node registered successfully" will be displayed.
 
-
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfu2A7sDIXqBjnO4-XRFz4vJAhHuPzdjbdSoPacRscdxpnvIAGlM5G3Op2vg6A2z_Jt3k76Fp4LNBiz4R6-6tQHFm4jOxIMHLIuYXLLIik73yChHaUY8o19ZTV-h91QjCaANnlBMg?key=9jIxUVTok0XDRH__-NQrXLqR" alt=""><figcaption></figcaption></figure>
 
 Congratulations !!! You are now successfully registerd the master node and the reward will be credited directly to the wallet which you used to regiuster the master node
 
