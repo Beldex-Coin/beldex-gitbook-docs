@@ -33,6 +33,7 @@
   * [Master Node Express Setup](master-nodes/guides/master-node-express-setup.md)
   * [Master Node Update Guide](master-nodes/guides/master-node-update-guide.md)
   * [Master Node Docker Setup](master-nodes/guides/master-node-docker-setup.md)
+  * [Master Node Registration Guide](master-nodes/guides/master-node-registration-guide.md)
 
 ## BelNet
 
