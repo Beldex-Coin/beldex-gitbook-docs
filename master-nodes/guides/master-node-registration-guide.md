@@ -150,6 +150,8 @@ If the `beldex-storage-server` does not respond to pings in the `beldexd` status
 systemctl restart beldex-storage-server.service
 ```
 
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcf7LeQF-WijGlb_kiewPKmGJ2SiGXelnnrIB_mvSJRRzEVNxaQIpwzAcKhmEQ8iRtZzVEq4khVAWtbSCNXbHLiX0OAXs5NVBuvVhbXnI31VlgJUVi2BjNjzg_F2rFDjN1niAH8sw?key=9jIxUVTok0XDRH__-NQrXLqR" alt=""><figcaption></figcaption></figure>
+
 **2. Belnet Router Not Pinging:**
 
 If the `belnet-router` ping is not received:
@@ -158,9 +160,13 @@ If the `belnet-router` ping is not received:
 systemctl restart belnet-router.service
 ```
 
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeUzh62moK0Ki-FLq7Q3EbKDDlnagWVJRdJasYTyD7rF915AHKc74-XyjoUD9erMDnG0HUYSNX1R7MVM9vlsSjU5QNDQt-yqolXa9NC28SmZ21g4PdqjC4SB4CapfSJemoW5sOr?key=9jIxUVTok0XDRH__-NQrXLqR" alt=""><figcaption></figcaption></figure>
+
 **3. Belnet Router Bootstrap Error:**
 
-If `belnet-router` fails to bootstrap, follow these steps:
+If `belnet-router` fails to bootstrap, follow these commands:
+
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdrmnNLGQttXEpirKbaoZsDcdyEEiTx5kGsoCDAedg1ohQcKJk2I92ZUYtIliI48CP50Jvs_QiYqfkHTfaPjjYIfpp1KKNK7pXe9JKpfdR8EcZvUOOqgcNqAkKcEpp9MPi7_xKvFw?key=9jIxUVTok0XDRH__-NQrXLqR" alt=""><figcaption></figcaption></figure>
 
 *   Check the service status:
 
