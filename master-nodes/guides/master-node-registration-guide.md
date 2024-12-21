@@ -124,11 +124,11 @@ Enter the wallet address when prompted, and follow the instructions carefully.
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcCdz6MbzVpMJ94emtxtfeQvdRmZa9tTOq-L2grOkIJdWOyk01XDF8OUg6OhHYajv4nJjswYTOG7KGMeIg6rOkJlpOwRMqQ8g3dXPniKvaYtiG2YvwBVqJ1XCW3m2QpMOtYti_cMA?key=9jIxUVTok0XDRH__-NQrXLqR" alt=""><figcaption></figcaption></figure>
 
-After providing all the required prompt data, the \`register\_master\_node\` string will be generated.
+After providing all the required prompt data, the `register_master_node` string will be generated.
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfwYrzCAhyQwaea1IzXjyhiSbabmj7hf_4P6DJxrNPV4byoYOYCWKhbRGcJST8nuiaKGnDhXuYUrdMi2txO-EfR4tvYzNiBFPvAKIhLRru2jJWQTX_aiiCrRkyAFUJyh5LUWbN0gw?key=9jIxUVTok0XDRH__-NQrXLqR" alt=""><figcaption></figcaption></figure>
 
-Open the Electron Desktop wallet and  entertThe generated \`register\_master\_node\` string in the registration section as shown in the below screenshot
+Open the Electron Desktop wallet and  enter the generated `register_master_node` string in the registration section as shown in the below screenshot
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXccQBX2GwFpK79Sb1uVdWBd3VEzkIEbrLnjnpQzW24iYj4Q2PJu9x6x50onN4XvUKTyWO88LrYp8BapRtbzMI69fF_f9K6KdPeqHogVEa1XYpHKs1_d3X9uGepOVPgqOgg6Cdge?key=9jIxUVTok0XDRH__-NQrXLqR" alt=""><figcaption></figcaption></figure>
 
@@ -183,7 +183,3 @@ If `belnet-router` fails to bootstrap, follow these steps:
     systemctl restart belnet-router.service
     ```
 * This process ensures the `belnet-bootstrap` binary downloads the required files to `/var/lib/belnet` and initiates pings.
-
-***
-
-By following these steps, you can successfully set up and troubleshoot a Beldex Master Node, ensuring seamless operation within the network.
