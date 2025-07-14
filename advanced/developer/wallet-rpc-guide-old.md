@@ -38,79 +38,80 @@ Note: "atomic units" refer to the smallest fraction of 1 BDX according to the be
 
 #### Index of JSON RPC Methods: <a href="#index-of-json-rpc-methods" id="index-of-json-rpc-methods"></a>
 
-* [get\_balance](wallet-rpc-guide-old.md#get\_balance)
-* [get\_address](wallet-rpc-guide-old.md#get\_address)
-* [get\_address\_index](wallet-rpc-guide-old.md#get\_address\_index)
-* [create\_address](wallet-rpc-guide-old.md#create\_address)
-* [label\_address](wallet-rpc-guide-old.md#label\_address)
-* [get\_accounts](wallet-rpc-guide-old.md#get\_accounts)
-* [create\_account](wallet-rpc-guide-old.md#create\_account)
-* [label\_account](wallet-rpc-guide-old.md#label\_account)
-* [get\_account\_tags](wallet-rpc-guide-old.md#get\_account\_tags)
-* [tag\_accounts](wallet-rpc-guide-old.md#tag\_accounts)
-* [untag\_accounts](wallet-rpc-guide-old.md#untag\_accounts)
-* [set\_account\_tag\_description](wallet-rpc-guide-old.md#set\_account\_tag\_description)
-* [get\_height](wallet-rpc-guide-old.md#get\_height)
+* [get\_balance](wallet-rpc-guide-old.md#get_balance)
+* [get\_address](wallet-rpc-guide-old.md#get_address)
+* [get\_address\_index](wallet-rpc-guide-old.md#get_address_index)
+* [create\_address](wallet-rpc-guide-old.md#create_address)
+* [validate\_address](wallet-rpc-guide-old.md#label_address)
+* [label\_address](wallet-rpc-guide-old.md#label_address)
+* [get\_accounts](wallet-rpc-guide-old.md#get_accounts)
+* [create\_account](wallet-rpc-guide-old.md#create_account)
+* [label\_account](wallet-rpc-guide-old.md#label_account)
+* [get\_account\_tags](wallet-rpc-guide-old.md#get_account_tags)
+* [tag\_accounts](wallet-rpc-guide-old.md#tag_accounts)
+* [untag\_accounts](wallet-rpc-guide-old.md#untag_accounts)
+* [set\_account\_tag\_description](wallet-rpc-guide-old.md#set_account_tag_description)
+* [get\_height](wallet-rpc-guide-old.md#get_height)
 * [transfer](wallet-rpc-guide-old.md#transfer)
-* [transfer\_split](wallet-rpc-guide-old.md#transfer\_split)
-* [sign\_transfer](wallet-rpc-guide-old.md#sign\_transfer)
-* [submit\_transfer](wallet-rpc-guide-old.md#submit\_transfer)
-* [sweep\_dust](wallet-rpc-guide-old.md#sweep\_dust)
-* [sweep\_all](wallet-rpc-guide-old.md#sweep\_all)
-* [sweep\_single](wallet-rpc-guide-old.md#sweep\_single)
-* [relay\_tx](wallet-rpc-guide-old.md#relay\_tx)
+* [transfer\_split](wallet-rpc-guide-old.md#transfer_split)
+* [sign\_transfer](wallet-rpc-guide-old.md#sign_transfer)
+* [submit\_transfer](wallet-rpc-guide-old.md#submit_transfer)
+* [sweep\_dust](wallet-rpc-guide-old.md#sweep_dust)
+* [sweep\_all](wallet-rpc-guide-old.md#sweep_all)
+* [sweep\_single](wallet-rpc-guide-old.md#sweep_single)
+* [relay\_tx](wallet-rpc-guide-old.md#relay_tx)
 * [store](wallet-rpc-guide-old.md#store)
-* [get\_payments](wallet-rpc-guide-old.md#get\_payments)
-* [get\_bulk\_payments](wallet-rpc-guide-old.md#get\_bulk\_payments)
-* [incoming\_transfers](wallet-rpc-guide-old.md#incoming\_transfers)
-* [query\_key](wallet-rpc-guide-old.md#query\_key)
-* [make\_integrated\_address](wallet-rpc-guide-old.md#make\_integrated\_address)
-* [split\_integrated\_address](wallet-rpc-guide-old.md#split\_integrated\_address)
-* [stop\_wallet](wallet-rpc-guide-old.md#stop\_wallet)
-* [rescan\_blockchain](wallet-rpc-guide-old.md#rescan\_blockchain)
-* [set\_tx\_notes](wallet-rpc-guide-old.md#set\_tx\_notes)
-* [get\_tx\_notes](wallet-rpc-guide-old.md#get\_tx\_notes)
-* [set\_attribute](wallet-rpc-guide-old.md#set\_attribute)
-* [get\_attribute](wallet-rpc-guide-old.md#get\_attribute)
-* [get\_tx\_key](wallet-rpc-guide-old.md#get\_tx\_key)
-* [check\_tx\_key](wallet-rpc-guide-old.md#check\_tx\_key)
-* [get\_tx\_proof](wallet-rpc-guide-old.md#get\_tx\_proof)
-* [check\_tx\_proof](wallet-rpc-guide-old.md#check\_tx\_proof)
-* [get\_spend\_proof](wallet-rpc-guide-old.md#get\_spend\_proof)
-* [check\_spend\_proof](wallet-rpc-guide-old.md#check\_spend\_proof)
-* [get\_reserve\_proof](wallet-rpc-guide-old.md#get\_reserve\_proof)
-* [check\_reserve\_proof](wallet-rpc-guide-old.md#check\_reserve\_proof)
-* [get\_transfers](wallet-rpc-guide-old.md#get\_transfers)
-* [get\_transfer\_by\_txid](wallet-rpc-guide-old.md#get\_transfer\_by\_txid)
+* [get\_payments](wallet-rpc-guide-old.md#get_payments)
+* [get\_bulk\_payments](wallet-rpc-guide-old.md#get_bulk_payments)
+* [incoming\_transfers](wallet-rpc-guide-old.md#incoming_transfers)
+* [query\_key](wallet-rpc-guide-old.md#query_key)
+* [make\_integrated\_address](wallet-rpc-guide-old.md#make_integrated_address)
+* [split\_integrated\_address](wallet-rpc-guide-old.md#split_integrated_address)
+* [stop\_wallet](wallet-rpc-guide-old.md#stop_wallet)
+* [rescan\_blockchain](wallet-rpc-guide-old.md#rescan_blockchain)
+* [set\_tx\_notes](wallet-rpc-guide-old.md#set_tx_notes)
+* [get\_tx\_notes](wallet-rpc-guide-old.md#get_tx_notes)
+* [set\_attribute](wallet-rpc-guide-old.md#set_attribute)
+* [get\_attribute](wallet-rpc-guide-old.md#get_attribute)
+* [get\_tx\_key](wallet-rpc-guide-old.md#get_tx_key)
+* [check\_tx\_key](wallet-rpc-guide-old.md#check_tx_key)
+* [get\_tx\_proof](wallet-rpc-guide-old.md#get_tx_proof)
+* [check\_tx\_proof](wallet-rpc-guide-old.md#check_tx_proof)
+* [get\_spend\_proof](wallet-rpc-guide-old.md#get_spend_proof)
+* [check\_spend\_proof](wallet-rpc-guide-old.md#check_spend_proof)
+* [get\_reserve\_proof](wallet-rpc-guide-old.md#get_reserve_proof)
+* [check\_reserve\_proof](wallet-rpc-guide-old.md#check_reserve_proof)
+* [get\_transfers](wallet-rpc-guide-old.md#get_transfers)
+* [get\_transfer\_by\_txid](wallet-rpc-guide-old.md#get_transfer_by_txid)
 * [sign](wallet-rpc-guide-old.md#sign)
 * [verify](wallet-rpc-guide-old.md#verify)
-* [export\_outputs](wallet-rpc-guide-old.md#export\_outputs)
-* [import\_outputs](wallet-rpc-guide-old.md#import\_outputs)
-* [export\_key\_images](wallet-rpc-guide-old.md#export\_key\_images)
-* [import\_key\_images](wallet-rpc-guide-old.md#import\_key\_images)
-* [make\_uri](wallet-rpc-guide-old.md#make\_uri)
-* [parse\_uri](wallet-rpc-guide-old.md#parse\_uri)
-* [get\_address\_book](wallet-rpc-guide-old.md#get\_address\_book)
-* [add\_address\_book](wallet-rpc-guide-old.md#add\_address\_book)
-* [delete\_address\_book](wallet-rpc-guide-old.md#delete\_address\_book)
+* [export\_outputs](wallet-rpc-guide-old.md#export_outputs)
+* [import\_outputs](wallet-rpc-guide-old.md#import_outputs)
+* [export\_key\_images](wallet-rpc-guide-old.md#export_key_images)
+* [import\_key\_images](wallet-rpc-guide-old.md#import_key_images)
+* [make\_uri](wallet-rpc-guide-old.md#make_uri)
+* [parse\_uri](wallet-rpc-guide-old.md#parse_uri)
+* [get\_address\_book](wallet-rpc-guide-old.md#get_address_book)
+* [add\_address\_book](wallet-rpc-guide-old.md#add_address_book)
+* [delete\_address\_book](wallet-rpc-guide-old.md#delete_address_book)
 * [refresh](wallet-rpc-guide-old.md#refresh)
-* [rescan\_spent](wallet-rpc-guide-old.md#rescan\_spent)
-* [start\_mining](wallet-rpc-guide-old.md#start\_mining)
-* [stop\_mining](wallet-rpc-guide-old.md#stop\_mining)
-* [get\_languages](wallet-rpc-guide-old.md#get\_languages)
-* [create\_wallet](wallet-rpc-guide-old.md#create\_wallet)
-* [open\_wallet](wallet-rpc-guide-old.md#open\_wallet)
-* [close\_wallet](wallet-rpc-guide-old.md#close\_wallet)
-* [change\_wallet\_password](wallet-rpc-guide-old.md#change\_wallet\_password)
-* [is\_multisig](wallet-rpc-guide-old.md#is\_multisig)
-* [prepare\_multisig](wallet-rpc-guide-old.md#prepare\_multisig)
-* [make\_multisig](wallet-rpc-guide-old.md#make\_multisig)
-* [export\_multisig\_info](wallet-rpc-guide-old.md#export\_multisig\_info)
-* [import\_multisig\_info](wallet-rpc-guide-old.md#import\_multisig\_info)
-* [finalize\_multisig](wallet-rpc-guide-old.md#finalize\_multisig)
-* [sign\_multisig](wallet-rpc-guide-old.md#sign\_multisig)
-* [submit\_multisig](wallet-rpc-guide-old.md#submit\_multisig)
-* [get\_version](wallet-rpc-guide-old.md#get\_version)
+* [rescan\_spent](wallet-rpc-guide-old.md#rescan_spent)
+* [start\_mining](wallet-rpc-guide-old.md#start_mining)
+* [stop\_mining](wallet-rpc-guide-old.md#stop_mining)
+* [get\_languages](wallet-rpc-guide-old.md#get_languages)
+* [create\_wallet](wallet-rpc-guide-old.md#create_wallet)
+* [open\_wallet](wallet-rpc-guide-old.md#open_wallet)
+* [close\_wallet](wallet-rpc-guide-old.md#close_wallet)
+* [change\_wallet\_password](wallet-rpc-guide-old.md#change_wallet_password)
+* [is\_multisig](wallet-rpc-guide-old.md#is_multisig)
+* [prepare\_multisig](wallet-rpc-guide-old.md#prepare_multisig)
+* [make\_multisig](wallet-rpc-guide-old.md#make_multisig)
+* [export\_multisig\_info](wallet-rpc-guide-old.md#export_multisig_info)
+* [import\_multisig\_info](wallet-rpc-guide-old.md#import_multisig_info)
+* [finalize\_multisig](wallet-rpc-guide-old.md#finalize_multisig)
+* [sign\_multisig](wallet-rpc-guide-old.md#sign_multisig)
+* [submit\_multisig](wallet-rpc-guide-old.md#submit_multisig)
+* [get\_version](wallet-rpc-guide-old.md#get_version)
 * [bns\_buy\_mapping](wallet-rpc-guide-old.md#sources)
 * [bns\_renew\_mapping](wallet-rpc-guide-old.md#sources-1)
 * [bns\_update\_mapping](wallet-rpc-guide-old.md#sources-2)
@@ -291,6 +292,45 @@ $ curl -X POST http://127.0.0.1:19092/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
   }
 }
 
+```
+
+### validate\_address <a href="#label_address" id="label_address"></a>
+
+Performs address validation and determines the corresponding network classification.
+
+Inputs:
+
+* address (string, **required**)
+  * &#x20;The address to be validated.
+* any\_net\_type (bool, **optional**)
+  * If set to `true`, allows detection of addresses from any network type (mainnet, testnet or devnet). Default is `false`.
+
+Outputs:
+
+* nettype (string)
+  * The network type associated with the address (`mainnet`, `testnet` or `devnet`).
+* integrated (bool)
+  * Indicates whether the address is an integrated address (`true`) or not (`false`).
+* subaddress (bool)
+  * Indicates whether the address is a subaddress (`true`) or a standard address (`false`).
+* valid (bool)
+  * Returns `true` if the address is valid, otherwise `false`.
+
+Example:
+
+```
+$ curl -X POST http://127.0.0.1:19092/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"validate_address","params":{"address":"bxcVLYgjDBZDJqCtnrEE2fhTG7r1WyrMLdX3fC22NkQm35B7MM7mU8kN5xvqKAdQTAivPFR7duNauVhXKE17BTqh2kMtAqgXs","any_net_type":true}}' -H 'Content-Type: application/json'
+{
+  "id": "0",
+  "jsonrpc": "2.0",
+  "result": {
+    "integrated": false,
+    "nettype": "mainnet",
+    "openalias_address": "",
+    "subaddress": false,
+    "valid": true
+  }
+}
 ```
 
 ### **label\_address** <a href="#label_address" id="label_address"></a>
