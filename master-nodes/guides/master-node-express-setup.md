@@ -8,9 +8,9 @@ Thinking of running a Beldex Master Node? Great! The guide below will help you c
 
 One of:
 
-* Ubuntu 18.04 ("bionic")
 * Ubuntu 20.04 ("focal")
-* Ubuntu 20.10 ("groovy")
+* Ubuntu 22.04.05 ("Jammy Jellyfish")
+* Ubuntu 25.04.5 ("Noble Numbet")
 
 > Note: There are strict uptime requirements for Master Nodes. It is **strongly discouraged** to run a Master Node on a device that will not be continuously on-line. We recommend running your Master Node on a VPS with a reputable provider.
 

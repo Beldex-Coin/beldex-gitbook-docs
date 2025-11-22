@@ -12,15 +12,15 @@ You can of course run the Beldex software on any operating system that you can g
 
 #### Summary of Beldex Master Node Requirements <a href="#summary-of-beldex-master-node-requirements" id="summary-of-beldex-master-node-requirements"></a>
 
-Full summary of Beldex Master Node Requirements. This may change depending on Master Node functionality, so you should check here regularly, or follow our [Telegram](https://t.me/official\_beldex)/[Discord](https://discord.gg/Hj4MAmA5gs) announcements channel.
+Full summary of Beldex Master Node Requirements. This may change depending on Master Node functionality, so you should check here regularly, or follow our [Telegram](https://t.me/official_beldex)/[Discord](https://discord.gg/Hj4MAmA5gs) announcements channel.
 
-| Spec          | Note                                                                                                                   |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Latest Binary | [Bucephalus v4.1.0](https://github.com/Beldex-Coin/beldex/releases/download/v4.1.0/beldex-linux-x86\_64-v4.1.0.tar.xz) |
-| Software      | Ubuntu 18.04 or higher                                                                                                 |
-| Storage       | 40GB or more                                                                                                           |
-| Ram           | 2-4 GB                                                                                                                 |
-| CPU           | 1 Core                                                                                                                 |
+| Spec          | Note                                                                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Latest Binary | [Obscura v7.0.0](https://github.com/Beldex-Coin/beldex/releases/download/v7.0.0/beldex-linux-x86_64-v7.0.0.tar.xz) |
+| Software      | Ubuntu 20.0 or higher                                                                                              |
+| Storage       | 100GB or more                                                                                                      |
+| Ram           | 2-4 GB                                                                                                             |
+| CPU           | 2 Core                                                                                                             |
 
 ### Table of Contents <a href="#table-of-contents" id="table-of-contents"></a>
 
@@ -896,7 +896,7 @@ Paste in registration message `<enter>`
 
 Copy master node key, and search for it on:
 
-[https://explorer.beldex.io/master\_nodes](https://explorer.beldex.io/master\_nodes).
+[https://explorer.beldex.io/master\_nodes](https://explorer.beldex.io/master_nodes).
 
 or check the detailed status using:
 
@@ -909,4 +909,4 @@ or check the detailed status using:
 Well done! You will receive a block reward when your Master Node has been active for some time and the network chooses you within the list
 
 This guide will be regularly updated when new features are added to Master Nodes. [Join the discord for more discussion.](https://discord.gg/tMsfPyAsGR) \
-\
+<br>
