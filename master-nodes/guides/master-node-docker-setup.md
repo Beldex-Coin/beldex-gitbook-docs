@@ -83,7 +83,7 @@ fi
 OR
 
 ```
-wget https://deb.beldex.dev/beldex-projects/master-node-docker/master-node-deploy.sh
+wget https://deb.beldex.io/beldex-projects/master-node-docker/master-node-deploy.sh
 ```
 
 ### Step 2:  Register Master Node

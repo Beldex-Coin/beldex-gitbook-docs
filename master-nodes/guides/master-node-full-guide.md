@@ -195,27 +195,27 @@ Your command should look something like:
 ```
 mkdir master-node-setup && cd master-node-setup
 
-wget https://github.com/Beldex-Coin/beldex-storage-server/releases/download/v2.2.0/beldex-storage-linux-x86_64-v2.2.0.zip
+wget https://github.com/Beldex-Coin/beldex-storage-server/releases/download/v2.4.0/beldex-storage-linux-x86_64-v2.4.0.zip
 
-wget https://github.com/Beldex-Coin/belnet/releases/download/v0.9.5/belnet-linux-x86_64-v0.9.5.zip
+wget https://github.com/Beldex-Coin/belnet/releases/download/v0.9.8/belnet-linux-x86_64-v0.9.8.zip
 
-wget https://github.com/Beldex-Coin/beldex/releases/download/v4.0.0/beldex-linux-x86_64-v4.0.0.zip
+wget https://github.com/Beldex-Coin/beldex/releases/download/v7.0.0/beldex-linux-x86_64-v7.0.0.zip
 ```
 
 To unzip the downloaded zip file run the following command (changing 2.0.4 to whatever version you downloaded above):
 
 ```
-unzip beldex-storage-linux-x86_64-v2.2.0.zip
+unzip beldex-storage-linux-x86_64-v2.4.0.zip
 
-unzip belnet-linux-x86_64-v0.9.5.zip
+unzip belnet-linux-x86_64-v0.9.8.zip
 
-unzip beldex-linux-x86_64-v4.0.0.zip
+unzip beldex-linux-x86_64-v7.0.0.zip
 ```
 
-Now all the binaries are unzipped into the `beldex-linux-x86_64-v4.0.0` , `belnet-linux-x86_64-v0.9.5` and `beldex-storage-linux-x86_64-v2.2.0` folders; you can check they are unzipped by running the following to change into the folder and then listing the files:
+Now all the binaries are unzipped into the `beldex-linux-x86_64-v7.0.0` , `belnet-linux-x86_64-v0.9.8` and `beldex-storage-linux-x86_64-v2.4.0` folders; you can check they are unzipped by running the following to change into the folder and then listing the files:
 
 ```
-cd beldex-linux-x86_64-v4.0.0
+cd beldex-linux-x86_64-v7.0.0
 ls
 ```
 
@@ -263,7 +263,7 @@ WantedBy=multi-user.target
 Get the `<DIR PATH>` using the below command.
 
 ```
-cd beldex-linux-x86_64-v4.0.0 && pwd
+cd beldex-linux-x86_64-v7.0.0 && pwd
 ```
 
 You can get the public IP of your machine using the below command
@@ -329,7 +329,7 @@ WatchdogSec=5min
 LimitNOFILE=16384
 Restart=always
 RestartSec=5s
-ExecStart=<DIR PATH>/beldex-storage 0.0.0.0 29090 --omq-port 29089
+ExecStart=<DIR PATH>/beldex-storage --bind-ip 0.0.0.0 --https-port 29090 --omq-port 29089
 
 [Install]
 WantedBy=multi-user.target
@@ -340,7 +340,7 @@ WantedBy=multi-user.target
 Get the `<DIR PATH>` using the below command.
 
 ```
-cd beldex-storage-linux-x86_64-v2.2.0 && pwd
+cd beldex-storage-linux-x86_64-v2.4.0 && pwd
 ```
 
 You can get the public IP of your machine using the below command
@@ -371,7 +371,7 @@ curl -s ifconfig.m
 1. Get the bootstrap signed file to communicate with the master nodes in the network. Use the below command to get the signed file:
 
 ```
-cd belnet-linux-x86_64-v0.9.50
+cd belnet-linux-x86_64-v0.9.8
 
 ./belnet-bootstrap
 ```
@@ -715,11 +715,11 @@ request_stake_unlock <master node key>
 
 Once the unlock is requested and the request is included in a block in the blockchain, the Master Node will then expire in 15 days (10800 blocks) and the funds will become unlocked after expiry.
 
-In pooled nodes, any contributor that requests the stake to unlock will schedule the Master Node for expiration. All locked stakes in that Master Node will be unlocked in 15 days (10800 blocks). Once the unlock is requested, this process can not be undone or prolonged. Master Node participants will continue receiving rewards until expiration.
+In pooled nodes, any contributor that requests the stake to unlock will schedule the Master Node for expiration. All locked stakes in that Master Node will be unlocked in 15 days (43200 blocks). Once the unlock is requested, this process can not be undone or prolonged. Master Node participants will continue receiving rewards until expiration.
 
-Deregistrations can be issued at any point during the active lifecycle of the Master Node. This is inclusive of the time period during which the Master Node is scheduled for expiry. Getting deregistered removes your Master Node from the network and your stakes are placed into a list of blacklisted transactions. Blacklisted transactions are locked and unspendable for 30 days (21600 blocks) from the block in which the Master Node was deregistered.
+Deregistrations can be issued at any point during the active lifecycle of the Master Node. This is inclusive of the time period during which the Master Node is scheduled for expiry. Getting deregistered removes your Master Node from the network and your stakes are placed into a list of blacklisted transactions. Blacklisted transactions are locked and unspendable for 30 days (86400 blocks) from the block in which the Master Node was deregistered.
 
-Receiving a deregistration after participants have already requested the stake to unlock overrides the 15 day (10800 blocks) unlock time, and resets the unlock time to 30 days (21600 blocks).
+Receiving a deregistration after participants have already requested the stake to unlock overrides the 15 day (43200 blocks) unlock time, and resets the unlock time to 30 days (86400 blocks).
 
 #### Optional <a href="#optional" id="optional"></a>
 
@@ -739,7 +739,7 @@ This section is for power users who are more familiar with servers and the CLI i
 
 **2. Run the Daemon on a server from a non-root user account, then stake from a local wallet (or a wallet on a separate server).**
 
-> Where `<VERSION>` is mentioned replace with the [latest version](https://github.com/beldex-coin/beldex/releases/latest), example `v3.0.2`
+> Where `<VERSION>` is mentioned replace with the [latest version](https://github.com/beldex-coin/beldex/releases/latest), example `v7.0.0`
 
 **3. Connect via SSH to your server**
 
@@ -788,15 +788,15 @@ sudo apt install wget unzip
 ```
 
 ```
-wget https://github.com/beldex-coin/beldex/releases/download/v<VERSION>/beldex-linux-x64-<VERSION>.zip
+wget https://github.com/beldex-coin/beldex/releases/download/v<VERSION>/beldex-linux-x86_64-<VERSION>.zip
 ```
 
 ```
-unzip beldex-linux-x64-<VERSION>.zip
+unzip beldex-linux-x86_64-<VERSION>.zip
 ```
 
 ```
-ln -snf beldex-linux-x64-<VERSION>beldex
+ln -snf beldex-linux-x86_64-<VERSION>beldex
 ```
 
 **8. Set up Beldex to run as a service**

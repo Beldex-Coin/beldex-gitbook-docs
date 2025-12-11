@@ -10,30 +10,30 @@ Note: "atomic units" refer to the smallest fraction of 1 BDX according to the be
 
 ### JSON RPC Methods:
 
-* [get\_block\_count](daemon-rpc-guide-old.md#get\_block\_count)
-* [on\_get\_block\_hash](daemon-rpc-guide-old.md#on\_get\_block\_hash)
-* [get\_block\_template](daemon-rpc-guide-old.md#get\_block\_template)
-* [submit\_block](daemon-rpc-guide-old.md#submit\_block)
-* [get\_last\_block\_header](daemon-rpc-guide-old.md#get\_last\_block\_header)
-* [get\_block\_header\_by\_hash](daemon-rpc-guide-old.md#get\_block\_header\_by\_hash)
-* [get\_block\_header\_by\_height](daemon-rpc-guide-old.md#get\_block\_header\_by\_height)
-* [get\_block\_headers\_range](daemon-rpc-guide-old.md#get\_block\_headers\_range)
-* [get\_block](daemon-rpc-guide-old.md#get\_block)
-* [get\_connections](daemon-rpc-guide-old.md#get\_connections)
-* [get\_info](daemon-rpc-guide-old.md#get\_info)
-* [hard\_fork\_info](daemon-rpc-guide-old.md#hard\_fork\_info)
-* [set\_bans](daemon-rpc-guide-old.md#set\_bans)
-* [get\_bans](daemon-rpc-guide-old.md#get\_bans)
-* [flush\_txpool](daemon-rpc-guide-old.md#flush\_txpool)
-* [get\_output\_histogram](daemon-rpc-guide-old.md#get\_output\_histogram)
-* [get\_version](daemon-rpc-guide-old.md#get\_version)
-* [get\_coinbase\_tx\_sum](daemon-rpc-guide-old.md#get\_coinbase\_tx\_sum)
-* [get\_fee\_estimate](daemon-rpc-guide-old.md#get\_fee\_estimate)
-* [get\_alternate\_chains](daemon-rpc-guide-old.md#get\_alternate\_chains)
-* [relay\_tx](daemon-rpc-guide-old.md#relay\_tx)
-* [sync\_info](daemon-rpc-guide-old.md#sync\_info)
-* [get\_txpool\_backlog](daemon-rpc-guide-old.md#get\_txpool\_backlog)
-* [get\_output\_distribution](daemon-rpc-guide-old.md#get\_output\_distribution)
+* [get\_block\_count](daemon-rpc-guide-old.md#get_block_count)
+* [on\_get\_block\_hash](daemon-rpc-guide-old.md#on_get_block_hash)
+* [get\_block\_template](daemon-rpc-guide-old.md#get_block_template)
+* [submit\_block](daemon-rpc-guide-old.md#submit_block)
+* [get\_last\_block\_header](daemon-rpc-guide-old.md#get_last_block_header)
+* [get\_block\_header\_by\_hash](daemon-rpc-guide-old.md#get_block_header_by_hash)
+* [get\_block\_header\_by\_height](daemon-rpc-guide-old.md#get_block_header_by_height)
+* [get\_block\_headers\_range](daemon-rpc-guide-old.md#get_block_headers_range)
+* [get\_block](daemon-rpc-guide-old.md#get_block)
+* [get\_connections](daemon-rpc-guide-old.md#get_connections)
+* [get\_info](daemon-rpc-guide-old.md#get_info)
+* [hard\_fork\_info](daemon-rpc-guide-old.md#hard_fork_info)
+* [set\_bans](daemon-rpc-guide-old.md#set_bans)
+* [get\_bans](daemon-rpc-guide-old.md#get_bans)
+* [flush\_txpool](daemon-rpc-guide-old.md#flush_txpool)
+* [get\_output\_histogram](daemon-rpc-guide-old.md#get_output_histogram)
+* [get\_version](daemon-rpc-guide-old.md#get_version)
+* [get\_coinbase\_tx\_sum](daemon-rpc-guide-old.md#get_coinbase_tx_sum)
+* [get\_fee\_estimate](daemon-rpc-guide-old.md#get_fee_estimate)
+* [get\_alternate\_chains](daemon-rpc-guide-old.md#get_alternate_chains)
+* [relay\_tx](daemon-rpc-guide-old.md#relay_tx)
+* [sync\_info](daemon-rpc-guide-old.md#sync_info)
+* [get\_txpool\_backlog](daemon-rpc-guide-old.md#get_txpool_backlog)
+* [get\_output\_distribution](daemon-rpc-guide-old.md#get_output_distribution)
 * [bns\_names\_to\_owners](daemon-rpc-guide-old.md#sources)
 * [bns\_owners\_to\_names](daemon-rpc-guide-old.md#sources-1)
 * [bns\_resolve](daemon-rpc-guide-old.md#sources-2)
@@ -41,36 +41,36 @@ Note: "atomic units" refer to the smallest fraction of 1 BDX according to the be
 
 ### Other RPC Methods:
 
-* [/get\_height](daemon-rpc-guide-old.md#get\_height)
-* [/get\_blocks.bin](daemon-rpc-guide-old.md#get\_blocks-bin)
-* [/get\_blocks\_by\_height.bin](daemon-rpc-guide-old.md#get\_blocks\_by\_height-bin)
-* [/get\_hashes.bin](daemon-rpc-guide-old.md#get\_hashes-bin)
-* [/get\_o\_indexes.bin](daemon-rpc-guide-old.md#get\_o\_indexes-bin)
-* [/get\_outs.bin](daemon-rpc-guide-old.md#get\_outs-bin)
-* [/get\_transactions](daemon-rpc-guide-old.md#get\_transactions)
-* [/get\_alt\_blocks\_hashes](daemon-rpc-guide-old.md#get\_alt\_blocks\_hashes)
-* [/is\_key\_image\_spent](daemon-rpc-guide-old.md#is\_key\_image\_spent)
-* [/send\_raw\_transaction](daemon-rpc-guide-old.md#send\_raw\_transaction)
-* [/start\_mining](daemon-rpc-guide-old.md#start\_mining)
-* [/stop\_mining](daemon-rpc-guide-old.md#stop\_mining)
-* [/mining\_status](daemon-rpc-guide-old.md#mining\_status)
-* [/save\_bc](daemon-rpc-guide-old.md#save\_bc)
-* [/get\_peer\_list](daemon-rpc-guide-old.md#get\_peer\_list)
-* [/set\_log\_hash\_rate](daemon-rpc-guide-old.md#set\_log\_hash\_rate)
-* [/set\_log\_level](daemon-rpc-guide-old.md#set\_log\_level)
-* [/set\_log\_categories](daemon-rpc-guide-old.md#set\_log\_categories)
-* [/get\_transaction\_pool](daemon-rpc-guide-old.md#get\_transaction\_pool)
-* [/get\_transaction\_pool\_hashes.bin](daemon-rpc-guide-old.md#get\_transaction\_pool\_hashes-bin)
-* [/get\_transaction\_pool\_stats](daemon-rpc-guide-old.md#get\_transaction\_pool\_stats)
-* [/stop\_daemon](daemon-rpc-guide-old.md#stop\_daemon)
-* [/get\_info (not JSON)](daemon-rpc-guide-old.md#get\_info-not-json)
-* [/get\_limit](daemon-rpc-guide-old.md#get\_limit)
-* [/set\_limit](daemon-rpc-guide-old.md#set\_limit)
-* [/out\_peers](daemon-rpc-guide-old.md#out\_peers)
-* [/in\_peers](daemon-rpc-guide-old.md#in\_peers)
-* [/start\_save\_graph](daemon-rpc-guide-old.md#start\_save\_graph)
-* [/stop\_save\_graph](daemon-rpc-guide-old.md#stop\_save\_graph)
-* [/get\_outs](daemon-rpc-guide-old.md#get\_outs)
+* [/get\_height](daemon-rpc-guide-old.md#get_height)
+* [/get\_blocks.bin](daemon-rpc-guide-old.md#get_blocks-bin)
+* [/get\_blocks\_by\_height.bin](daemon-rpc-guide-old.md#get_blocks_by_height-bin)
+* [/get\_hashes.bin](daemon-rpc-guide-old.md#get_hashes-bin)
+* [/get\_o\_indexes.bin](daemon-rpc-guide-old.md#get_o_indexes-bin)
+* [/get\_outs.bin](daemon-rpc-guide-old.md#get_outs-bin)
+* [/get\_transactions](daemon-rpc-guide-old.md#get_transactions)
+* [/get\_alt\_blocks\_hashes](daemon-rpc-guide-old.md#get_alt_blocks_hashes)
+* [/is\_key\_image\_spent](daemon-rpc-guide-old.md#is_key_image_spent)
+* [/send\_raw\_transaction](daemon-rpc-guide-old.md#send_raw_transaction)
+* [/start\_mining](daemon-rpc-guide-old.md#start_mining)
+* [/stop\_mining](daemon-rpc-guide-old.md#stop_mining)
+* [/mining\_status](daemon-rpc-guide-old.md#mining_status)
+* [/save\_bc](daemon-rpc-guide-old.md#save_bc)
+* [/get\_peer\_list](daemon-rpc-guide-old.md#get_peer_list)
+* [/set\_log\_hash\_rate](daemon-rpc-guide-old.md#set_log_hash_rate)
+* [/set\_log\_level](daemon-rpc-guide-old.md#set_log_level)
+* [/set\_log\_categories](daemon-rpc-guide-old.md#set_log_categories)
+* [/get\_transaction\_pool](daemon-rpc-guide-old.md#get_transaction_pool)
+* [/get\_transaction\_pool\_hashes.bin](daemon-rpc-guide-old.md#get_transaction_pool_hashes-bin)
+* [/get\_transaction\_pool\_stats](daemon-rpc-guide-old.md#get_transaction_pool_stats)
+* [/stop\_daemon](daemon-rpc-guide-old.md#stop_daemon)
+* [/get\_info (not JSON)](daemon-rpc-guide-old.md#get_info-not-json)
+* [/get\_limit](daemon-rpc-guide-old.md#get_limit)
+* [/set\_limit](daemon-rpc-guide-old.md#set_limit)
+* [/out\_peers](daemon-rpc-guide-old.md#out_peers)
+* [/in\_peers](daemon-rpc-guide-old.md#in_peers)
+* [/start\_save\_graph](daemon-rpc-guide-old.md#start_save_graph)
+* [/stop\_save\_graph](daemon-rpc-guide-old.md#stop_save_graph)
+* [/get\_outs](daemon-rpc-guide-old.md#get_outs)
 * [/update](daemon-rpc-guide-old.md#update)
 
 ## JSON RPC Methods
@@ -202,7 +202,7 @@ Alias: _submitblock_.
 
 Inputs:
 
-* Block blob data - array of strings; list of block blobs which have been mined. See [get\_block\_template](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_block\_template) to get a blob on which to mine.
+* Block blob data - array of strings; list of block blobs which have been mined. See [get\_block\_template](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_block_template) to get a blob on which to mine.
 
 Outputs:
 
@@ -294,7 +294,7 @@ Inputs:
 
 Outputs:
 
-* _block\_header_ - A structure containing block header information. See [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_last\_block\_header).
+* _block\_header_ - A structure containing block header information. See [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_last_block_header).
 * _status_ - string; General RPC error code. "OK" means everything looks good.
 * _untrusted_ - boolean; States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
@@ -331,7 +331,7 @@ $ curl -X POST http://127.0.0.1:19091/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
 
 ### **get\_block\_header\_by\_height**
 
-Similar to [get\_block\_header\_by\_hash](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_block\_header\_by\_hash) above, this method includes a block's height as an input parameter to retrieve basic information about the block.
+Similar to [get\_block\_header\_by\_hash](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_block_header_by_hash) above, this method includes a block's height as an input parameter to retrieve basic information about the block.
 
 Alias: _getblockheaderbyheight_.
 
@@ -341,7 +341,7 @@ Inputs:
 
 Outputs:
 
-* _block\_header_ - A structure containing block header information. See [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_last\_block\_header).
+* _block\_header_ - A structure containing block header information. See [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_last_block_header).
 * _status_ - string; General RPC error code. "OK" means everything looks good.
 * _untrusted_ - boolean; States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
@@ -378,7 +378,7 @@ $ curl -X POST http://127.0.0.1:19091/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
 
 ### **get\_block\_headers\_range**
 
-Similar to [get\_block\_header\_by\_height](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_block\_header\_by\_height) above, but for a range of blocks. This method includes a starting block height and an ending block height as parameters to retrieve basic information about the range of blocks.
+Similar to [get\_block\_header\_by\_height](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_block_header_by_height) above, but for a range of blocks. This method includes a starting block height and an ending block height as parameters to retrieve basic information about the range of blocks.
 
 Alias: _getblockheadersrange_.
 
@@ -389,7 +389,7 @@ Inputs:
 
 Outputs:
 
-* _headers_ - array of `block_header` (a structure containing block header information. See [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_last\_block\_header)).
+* _headers_ - array of `block_header` (a structure containing block header information. See [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_last_block_header)).
 * _status_ - string; General RPC error code. "OK" means everything looks good.
 * _untrusted_ - boolean; States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
@@ -452,7 +452,7 @@ Inputs (pick one of the following):
 Outputs:
 
 * _blob_ - string; Hexadecimal blob of block information.
-* _block\_header_ - A structure containing block header information. See [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_last\_block\_header).
+* _block\_header_ - A structure containing block header information. See [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_last_block_header).
 * _json_ - json string; JSON formatted block details:
   * _major\_version_ - Same as in block header.
   * _minor\_version_ - Same as in block header.
@@ -630,7 +630,7 @@ Alias:
 * _/get\_info_
 * _/getinfo_
 
-See other RPC Methods [/get\_info (not JSON)](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_info-not-json)
+See other RPC Methods [/get\_info (not JSON)](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_info-not-json)
 
 Inputs: _None_.
 
@@ -756,11 +756,9 @@ Alias: _None_.
 
 Inputs:
 
-* _bans_ - A list of nodes to ban:
-  * _host_ - string; Host to ban (IP in A.B.C.D form - will support I2P address in the future).
-  * _ip_ - unsigned int; IP address to ban, in Int format.
-  * _ban_ - boolean; Set `true` to ban.
-  * _seconds_ - unsigned int; Number of seconds to ban node.
+* _host_ - string; Host to ban (IP in A.B.C.D form - will support I2P address in the future).
+* _ban_ - boolean; Set `true` to ban.
+* _seconds_ - unsigned int; Number of seconds to ban node.
 
 Outputs:
 
@@ -773,7 +771,7 @@ Examples:
 In the following example, host is banned with its IP address string-formatted as A.B.C.D:
 
 ```
-$ curl -X POST http://127.0.0.1:19091/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"set_bans","params":{"bans":[{"host":"192.168.1.51","ban":true,"seconds":30}]}}' -H  'Content-Type: application/json'
+$ curl -X POST http://127.0.0.1:19091/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"set_bans","params":{"host":"192.168.1.51","ban":true,"seconds":30}}' -H  'Content-Type: application/json'
 
 {
   "id": "0",
@@ -1092,7 +1090,7 @@ Outputs:
 
 * _height_ - unsigned int;
 * _peers_ - array of peer structure, defined as follows:
-  * _info_ - structure of connection info, as defined in [get\_connections](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_connections)
+  * _info_ - structure of connection info, as defined in [get\_connections](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_connections)
 * _spans_ - array of span structure, defined as follows (optional, absent if node is fully synced):
   * _connection\_id_ - string; Id of connection
   * _nblocks_ - unsigned int; number of blocks in that span
@@ -1239,7 +1237,7 @@ Alias: _None_.
 
 Inputs:
 
-* _entries_ - array of string; Entries to look up.
+* name\_hash - array of string; name\_hash to look up.
 * include\_expired - boolean; (Optional) If provided and true, include entries in the results even if they are expired.
 
 Outputs:
@@ -1259,7 +1257,7 @@ Outputs:
 Example:
 
 ```
-$ curl -X POST http://127.0.0.1:29092/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"bns_names_to_owners","params":{"entries":["4dknDpBMCXaxpvT72UvmYkyL4CgH7D0wVx3I1/unikg="]}}' -H 'Content-Type: application/json'
+$ curl -X POST http://127.0.0.1:29092/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"bns_names_to_owners","params":{"name_hash":["4dknDpBMCXaxpvT72UvmYkyL4CgH7D0wVx3I1/unikg="]}}' -H 'Content-Type: application/json'
 {
   "jsonrpc": "2.0",
   "id": "0",
@@ -1412,7 +1410,7 @@ curl \
 
 ```
 
-Note: It is recommended to use JSON RPC where such alternatives exist, rather than the following methods. For example, the recommended way to get a node's height is via the JSON RPC methods [get\_info](https://docs.beldex.io/Developer/DaemonRPCGuide/#getinfo) or [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_last\_block\_header), rather than [getheight](https://docs.beldex.io/Developer/DaemonRPCGuide/#getheight) below.
+Note: It is recommended to use JSON RPC where such alternatives exist, rather than the following methods. For example, the recommended way to get a node's height is via the JSON RPC methods [get\_info](https://docs.beldex.io/Developer/DaemonRPCGuide/#getinfo) or [get\_last\_block\_header](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_last_block_header), rather than [getheight](https://docs.beldex.io/Developer/DaemonRPCGuide/#getheight) below.
 
 For calls that end with **.bin**, the data is exchanged in the form of binary, serialized objects, as defined in the Core RPC Server.
 
@@ -2262,7 +2260,7 @@ $ curl -X POST http://127.0.0.1:19091/stop_daemon -H 'Content-Type: application/
 
 ### **/get\_info (not JSON)**
 
-This method is a convenient backward support and should not be used anymore. See [get\_info](https://docs.beldex.io/Developer/DaemonRPCGuide/#get\_info)JSON RPC for details.
+This method is a convenient backward support and should not be used anymore. See [get\_info](https://docs.beldex.io/Developer/DaemonRPCGuide/#get_info)JSON RPC for details.
 
 Alias:
 

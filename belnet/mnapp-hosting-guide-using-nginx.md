@@ -17,9 +17,7 @@ Download and run the binaries
 Enter the following command into the terminal to download the Belnet binaries from cloud&#x20;
 
 ```shell
-wget 
-https://deb.beldex.io/Beldex-projects/Belnet/deps/v0.9.6/linux/belnet-linux-x86_64-v0.9.6.zip
-
+wget https://github.com/Beldex-Coin/belnet/releases/download/v0.9.8/belnet-linux-x86_64-v0.9.8.zip
 ```
 
 
@@ -27,7 +25,7 @@ https://deb.beldex.io/Beldex-projects/Belnet/deps/v0.9.6/linux/belnet-linux-x86_
 Unzip the file using the following command&#x20;
 
 ```shell
-unzip belnet-linux-x86_64-v0.9.6.zip
+unzip belnet-linux-x86_64-v0.9.8.zip
 ```
 
 Run the Belnet binary

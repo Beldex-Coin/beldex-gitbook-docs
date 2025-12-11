@@ -8,9 +8,11 @@ description: BelNet GUI Installation Guide for Windows & Linux
 
 **Download BelNet GUI for windows from the .exe file below:**
 
-{% embed url="https://deb.beldex.io/Beldex-projects/belnet-gui/belnet-gui-1.1.1-win64.exe" %}
-BelNet for Windows
-{% endembed %}
+{% code fullWidth="true" %}
+```
+https://deb.beldex.io/Beldex-projects/belnet-gui/belnet-gui-2.0.0-win64.exe
+```
+{% endcode %}
 
 ## **Linux**
 

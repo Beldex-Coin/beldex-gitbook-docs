@@ -47,41 +47,41 @@ Where `<link>` is the download link of the latest linux release. To find the lin
 Your command should look something like:
 
 ```
-wget https://github.com/beldex-coin/beldex/releases/download/v3.1.3/beldex-linux-x64-v3.1.3.zip
+wget https://github.com/Beldex-Coin/beldex/releases/download/v7.0.0/beldex-linux-x86_64-v7.0.0.zip
 ```
 
-To unzip the downloaded zip file run the following command (changing 3.1.3 to whatever version you downloaded above):
+To unzip the downloaded zip file run the following command (changing 7.0.0 to whatever version you downloaded above):
 
 ```
-unzip beldex-linux-x64-v3.1.3.zip
+unzip beldex-linux-x86_64-v7.0.0.zip
 ```
 
 You will see something like this:
 
 ```
-Archive:  beldex-linux-x64-v3.1.3.zip
-   creating: beldex-linux-x64-v3.1.3/
-  inflating: beldex-linux-x64-v3.1.3/beldex-blockchain-ancestry  
-  inflating: beldex-linux-x64-v3.1.3/beldex-blockchain-depth  
-  inflating: beldex-linux-x64-v3.1.3/beldex-blockchain-export  
-  inflating: beldex-linux-x64-v3.1.3/beldex-blockchain-import  
-  inflating: beldex-linux-x64-v3.1.3/beldex-blockchain-mark-spent-outputs  
-  inflating: beldex-linux-x64-v3.1.3/beldex-blockchain-stats  
-  inflating: beldex-linux-x64-v3.1.3/beldex-blockchain-usage  
-  inflating: beldex-linux-x64-v3.1.3/beldex-gen-trusted-multisig  
-  inflating: beldex-linux-x64-v3.1.3/beldex-wallet-cli  
-  inflating: beldex-linux-x64-v3.1.3/beldex-wallet-rpc  
-  inflating: beldex-linux-x64-v3.1.3/beldexd  
+Archive:  beldex-linux-x86_64-v7.0.0.zip
+   creating: beldex-linux-x86_64-v7.0.0/
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-blockchain-ancestry  
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-blockchain-depth  
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-blockchain-export  
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-blockchain-import  
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-blockchain-mark-spent-outputs  
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-blockchain-stats  
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-blockchain-usage  
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-gen-trusted-multisig  
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-wallet-cli  
+  inflating: beldex-linux-x86_64-v7.0.0/beldex-wallet-rpc  
+  inflating: beldex-linux-x86_64-v7.0.0/beldexd  
 ```
 
-Note that they are unzipped into the `beldex-linux-x64-v3.1.3` folder; you can check they are unzipped by running the following to change into the folder and then listing the files:
+Note that they are unzipped into the `beldex-linux-x86_64-v7.0.0` folder; you can check they are unzipped by running the following to change into the folder and then listing the files:
 
 ```
-cd beldex-linux-x64-v3.1.3
+cd beldex-linux-x86_64-v7.0.0
 ls
 ```
 
-We now want to replace our "symlink" to the new extracted `beldex-linux-x64-v3.1.3` folder. If you are unfamiliar with what the "symlink" was doing previously have a look at the [Master Node Full Guide](https://docs.beldex.io/MasterNodes/MNFullGuide/#step-3-download-the-beldex-binaries) where you first set it up.
+We now want to replace our "symlink" to the new extracted `beldex-linux-x86_64-v7.0.0` folder. If you are unfamiliar with what the "symlink" was doing previously have a look at the [Master Node Full Guide](https://docs.beldex.io/MasterNodes/MNFullGuide/#step-3-download-the-beldex-binaries) where you first set it up.
 
 Otherwise, run the following command.:
 
@@ -90,14 +90,14 @@ cd
 ln -snf <folder_name> beldex
 ```
 
-Where `<folder_name>` is the new folder we created when unziping the release. In this case if we were to update to `v3.0.2` the commands we would use would be:
+Where `<folder_name>` is the new folder we created when unziping the release. In this case if we were to update to `v7.0.0` the commands we would use would be:
 
 ```
 cd
-ln -snf beldex-linux-x64-v3.1.3 beldex
+ln -snf beldex-linux-x86_64-v7.0.0 beldex
 ```
 
-This replaces our virtual `beldex` folder that pointed to an old folder to the `beldex-linux-x64-v3.1.3` folder we created.
+This replaces our virtual `beldex` folder that pointed to an old folder to the `beldex-linux-x86_64-v7.0.0` folder we created.
 
 At this point it is wise to restart your system with the following command:
 

@@ -22,15 +22,13 @@ Copy and paste the following link into the terminal
 This will download the Belnet binaries from cloud
 
 ```shell
-wget https://deb.beldex.io/Beldex-projects/Belnet/deps/v0.9.7/linux/belnet-linux-x86_64-v0.9.7.zip
+wget https://github.com/Beldex-Coin/belnet/releases/download/v0.9.8/belnet-linux-x86_64-v0.9.8.zip
 ```
-
-<figure><img src="../.gitbook/assets/Exit Node Setup Screenshot 1 (1).jpg" alt=""><figcaption></figcaption></figure>
 
 Unzip the file using the following command&#x20;
 
 ```shell
-unzip belnet-linux-x86_64-v0.9.7.zip
+unzip belnet-linux-x86_64-v0.9.8.zip
 ```
 
 **Execution**
