@@ -54,4 +54,5 @@
   * [Master Node RPC Guide](advanced/developer/master-node-rpc-guide.md)
   * [Daemon RPC Guide](advanced/developer/daemon-rpc-guide-old.md)
   * [Wallet RPC Guide](advanced/developer/wallet-rpc-guide-old.md)
+  * [bdx-web3js](advanced/developer/bdx-web3js.md)
   * [Developer FAQ](advanced/developer/developer-faq.md)

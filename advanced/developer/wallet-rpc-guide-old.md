@@ -122,6 +122,7 @@ Note: "atomic units" refer to the smallest fraction of 1 BDX according to the be
 * [bns\_encrypt\_value](wallet-rpc-guide-old.md#sources-7)
 * [bns\_decrypt\_value](wallet-rpc-guide-old.md#sources-8)
 * [coin\_burn](wallet-rpc-guide-old.md#sources-9)
+* [get\_owned\_tokens](wallet-rpc-guide-old.md#get_address_index-1)
 
 ### JSON RPC Methods: <a href="#json-rpc-methods" id="json-rpc-methods"></a>
 
@@ -3212,7 +3213,58 @@ Examples:
 }
 </code></pre>
 
+### **get\_owned\_tokens** <a href="#get_address_index" id="get_address_index"></a>
 
+Returns registered tokens owned by a wallet spend public key. When `owner` is omitted, the method uses the primary spend public key of the wallet currently open in `beldex-wallet-rpc`.
+
+Inputs:
+
+* _owner_ - String; (optional) Wallet address or spend public key hex to filter by owner
+
+Outputs:
+
+* tokens - array of token lists
+  * _token\_id_ - String; Token ID encoded as 64 hexadecimal characters.
+  * _full\_name_ - String; Token display name.
+  * ticker - String; Token ticker symbol.
+  * _max\_supply_ - String; Maximum supply in atomic token units. This corresponds to `total_max_supply` in the daemon RPC.
+  * _current\_supply_ - String; Current supply in atomic token units.
+  * _decimal\_point_ - String;  Number of decimal places used when displaying token amounts.
+  * _meta\_info_ - String; Current project-defined token metadata.
+
+
+
+Example:
+
+```
+$ curl -X POST http://127.0.0.1:19092/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_owned_tokens"}' -H 'Content-Type: application/json'
+{
+  "id": "0",
+  "jsonrpc": "2.0",
+  "result": {
+    "tokens": [
+      {
+      "current_supply": 10000000,
+      "decimal_point": 2,
+      "full_name": "Private Example Token",
+      "max_supply": 100000000,
+      "meta_info": "https://example.com/token.json",
+      "ticker": "PRIV",
+      "token_id": "ecf359ef1e0ba599b2ec8cd519b0632f332105142d4abf12e31962d2b7144a64"
+    },{
+      "current_supply": 5000000000000,
+      "decimal_point": 9,
+      "full_name": "privacy token",
+      "max_supply": 100000000000000,
+      "meta_info": "",
+      "ticker": "PT",
+      "token_id": "19225f51d2da1efc59bbcf755c8e5a4e7b1b9ea5d41c8524224c830e2962bbad"
+    }
+    ]
+  }
+}
+
+```
 
 #### Sources: <a href="#sources" id="sources"></a>
 

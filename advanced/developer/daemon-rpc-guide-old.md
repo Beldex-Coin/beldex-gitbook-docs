@@ -38,6 +38,8 @@ Note: "atomic units" refer to the smallest fraction of 1 BDX according to the be
 * [bns\_owners\_to\_names](daemon-rpc-guide-old.md#sources-1)
 * [bns\_resolve](daemon-rpc-guide-old.md#sources-2)
 * [bns\_value\_decrypt](daemon-rpc-guide-old.md#sources-3)
+* [get\_token\_info](daemon-rpc-guide-old.md#sources-4)
+* [get\_token\_list](daemon-rpc-guide-old.md#sources-5)
 
 ### Other RPC Methods:
 
@@ -1388,6 +1390,82 @@ $ curl -X POST http://127.0.0.1:29092/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
   "id": "0",
   "result": {
     "value": "bdff403a579c24edd0b973f9f00211ab3574ec083b2fd97b8b87de0e413e969942"
+  }
+}
+```
+
+### get\_token\_info <a href="#sources" id="sources"></a>
+
+Returns the current descriptor and supply state of one registered privacy token.
+
+Inputs:
+
+* _token\_id_ - String;  Token ID encoded as exactly 64 hexadecimal characters.
+
+Outputs:
+
+* _token\_id_ - Requested token ID.
+* _ticker_ - Token ticker symbol.
+* _full\_name_ - Token display name.
+* _owner_ -  Token owner's spend public key encoded as hexadecimal.
+* _current\_supply_ - Current supply in atomic token units.
+* _total\_max\_supply_ - Maximum supply in atomic token units.
+* _decimal\_point_ - Number of decimal places used when displaying token amounts.
+* _meta\_info_ - Current project-defined token metadata.
+* _status_ - `OK` when the request succeeds.
+
+Example:
+
+```
+$ curl -X POST http://127.0.0.1:19091/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_token_info","params":{"token_id":"41805b08dde0d4292d5ceff60857a7f93fb5681f07687d5e5a67062db2b43363"}}' -H 'Content-Type: application/json'
+{
+  "id": "0",
+  "jsonrpc": "2.0",
+  "result": {
+    "token_id": "41805b08dde0d4292d5ceff60857a7f93fb5681f07687d5e5a67062db2b43363",
+    "ticker": "PRIV",
+    "full_name": "Private Example Token",
+    "owner": "7079a7a895a221d13bd7cd82e4b13cf9a012479479957d848f987c48011e89d4",
+    "current_supply": 10250000,
+    "total_max_supply": 100000000,
+    "decimal_point": 2,
+    "meta_info": "https://example.com/token-v2.json",
+    "status": "OK"
+  }
+}
+```
+
+### get\_token\_list <a href="#sources" id="sources"></a>
+
+Returns token IDs registered on the blockchain. Use `offset` and `count` to retrieve the list in pages.
+
+Inputs:
+
+* _offset = 0_   - Unsigned integer;  Number of token IDs to skip.
+* _count = 100_ - Unsigned integer;  Maximum number of token IDs to return.
+
+Outputs:
+
+* _token\_ids_ - Requested page of hex-encoded token IDs. The array can be empty.
+* _total\_count_ - Total number of registered tokens, independent of pagination.
+* _status_ - `OK` when the request succeeds.
+
+Example:
+
+```
+$ curl -X POST http://127.0.0.1:19091/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_token_info","params":{"offset":0,"count":100}}' -H 'Content-Type: application/json'
+{
+  "id": "0",
+  "jsonrpc": "2.0",
+  "result": {
+    "token_ids": [
+        "41805b08dde0d4292d5ceff60857a7f93fb5681f07687d5e5a67062db2b43363",
+        "5bfbad2fe93a01848d4e03090e389919f3e2f579f368569d26450ddad0750fb9",
+        "7a73c0d155d631f832b89551906c56252400bdf506cec30f45acbf3929f7b717",
+        "22328defcb12180da3ec2bf2d554cc65d36e10c5b58e51efa2e1f0d9c718de90"
+        ],
+    "total_count": 4,
+    "status": "OK"
   }
 }
 ```
