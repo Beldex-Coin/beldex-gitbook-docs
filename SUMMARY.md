@@ -35,6 +35,12 @@
   * [Master Node Docker Setup](master-nodes/guides/master-node-docker-setup.md)
   * [Master Node Registration Guide](master-nodes/guides/master-node-registration-guide.md)
 
+## PRIVACY TOKENS
+
+* [Overview](privacy-tokens/overview.md)
+* [Guides](privacy-tokens/guides/README.md)
+  * [Privacy Token Guide](privacy-tokens/guides/privacy-token-guide.md)
+
 ## BelNet
 
 * [Exit Node Setup Guide](belnet/exit-node-setup-guide.md)
