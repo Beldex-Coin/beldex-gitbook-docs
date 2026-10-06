@@ -14,76 +14,72 @@ Copy the below code to a shell file `master-node-deploy.sh`&#x20;
 
 ```sh
 #!/bin/bash
-  
-# Define the Docker image and container name
-IMAGE_NAME="beldex/beldex-master-node:v1"
+set -euo pipefail
+
+IMAGE_NAME="beldex/beldex-master-node:v2"
 CONTAINER_NAME="beldex-mn-node"
 SERVICE_NAME="beldex-testnet-storage-server.service"
 
-# Run the Docker container
-echo "Running the Docker container..."
-docker run --network=host --privileged --name $CONTAINER_NAME -v /sys/fs/cgroup:/sys/fs/cgroup:ro -d $IMAGE_NAME
+echo "Starting container..."
+# choose the run command you want — simple example (Option A assumes the image runs the node directly)
+docker run --network=host --privileged --name "$CONTAINER_NAME" -d "$IMAGE_NAME" || true
 
-# Give Docker a moment to start the container
-sleep 5
+# give the daemon a second to settle
+sleep 3
 
-# Fetch the container ID for the given container name
-CONTAINER_ID=$(docker ps -q --filter name=$CONTAINER_NAME)
+# Get container id even if it's exited
+CONTAINER_ID=$(docker ps -aq --filter "name=^/${CONTAINER_NAME}$")
 
-# Check if any container ID is found
 if [ -z "$CONTAINER_ID" ]; then
-  echo "No running container found with name: $CONTAINER_NAME"
+  echo "No container was created with name: $CONTAINER_NAME"
   exit 1
-else
-  echo "Container ID for container $CONTAINER_NAME: $CONTAINER_ID"
 fi
 
-# Define the script to update the belnet.ini file
+# If it's not running, print logs and exit (helpful for debugging)
+STATUS=$(docker inspect -f '{{.State.Status}}' "$CONTAINER_ID")
+if [ "$STATUS" != "running" ]; then
+  echo "Container $CONTAINER_NAME (ID $CONTAINER_ID) is not running. Status: $STATUS"
+  echo "== docker logs =="
+  docker logs "$CONTAINER_ID" || true
+  echo "== docker inspect =="
+  docker inspect "$CONTAINER_ID"
+  exit 1
+fi
+
+echo "Container is running: $CONTAINER_ID"
+
+# Update script to run inside the container (unchanged)
 UPDATE_SCRIPT=$(cat <<'EOF'
 IP=$(curl -sS http://api.ipify.org || true)
 echo "IP for belnet: $IP"
 
-# Update the beldex.conf file
 sed -i -e "s/^master-node-public-ip=.*/master-node-public-ip=$IP/" /etc/beldex/beldex.conf
 
 PRIVATE_IP=$(ip route get 1.2.3.4 | awk '{print $7}')
 echo "PRIVATE_IP for belnet: $PRIVATE_IP"
 
 sed -i -e "s/^public-ip=.*/public-ip=$IP/" /var/lib/belnet/router/belnet.ini
-
 sed -i -e "s/^[[:space:]]*inbound=.*/     inbound=$PRIVATE_IP/" /var/lib/belnet/router/belnet.ini
 EOF
 )
 
-# Execute the update script inside the Docker container
-echo "Updating the belnet.ini,beldex.conf file inside the Docker container..."
-docker exec $CONTAINER_ID bash -c "$UPDATE_SCRIPT"
+echo "Updating files inside container..."
+docker exec "$CONTAINER_ID" bash -lc "$UPDATE_SCRIPT"
 
-# Confirm the update
-if [ $? -eq 0 ]; then
-  echo "belnet.ini,beldex.conf file inside container $CONTAINER_NAME with ID $CONTAINER_ID has been updated successfully."
-else
-  echo "Failed to update belnet.ini,beldex.conf file inside container $CONTAINER_NAME with ID $CONTAINER_ID."
+echo "Stopping "$SERVICE_NAME"  inside the container..."
+docker exec -it "$CONTAINER_ID" systemctl stop "$SERVICE_NAME" || {
+  echo "Failed to stop service. Check service name or systemd status inside the container."
+  docker exec "$CONTAINER_ID" journalctl -xe --no-pager || true
   exit 1
-fi
+}
 
-# stop the service inside the Docker container
-echo "Stop the service inside the Docker container..."
-docker exec -it $CONTAINER_ID systemctl stop $SERVICE_NAME
-
-# Confirm the service restart
-if [ $? -eq 0 ]; then
-  echo "Service $SERVICE_NAME inside container $CONTAINER_NAME with ID $CONTAINER_ID has been stoped successfully."
-else
-  echo "Failed to stop service $SERVICE_NAME inside container $CONTAINER_NAME with ID $CONTAINER_ID."
-  exit 1
-fi
+echo "Done."
 ```
 
 OR
 
 ```
-wget https://deb.beldex.io/beldex-projects/master-node-docker/master-node-deploy.sh
+wget https://deb.beldex.io/Beldex-projects/master-node-docker/master-node-deploy.sh
 ```
 
 ### Step 2:  Register Master Node
